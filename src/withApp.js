@@ -15,19 +15,10 @@ const withApp = (Component) => {
 
     const maxQueue = 100
     const fixedDecimals = 3
+
     const handleChange = (event) => {
-      if (event.target.value === "ADA") {
-        setDataPoints([])
-        setCrypto("ADA")
-      } else if (event.target.value === "ETH") {
-        setDataPoints([])
-        setCrypto("ETH")
-      } else if (event.target.value === "BTC") {
-        setDataPoints([])
-        setCrypto("BTC")
-      } else {
-        return null
-      }
+      setDataPoints([])
+      setCrypto(event.target.value)
     }
     const [dataPoints, setDataPoints] = useState([])
     const [change24hr, setChange24hr] = useState({
